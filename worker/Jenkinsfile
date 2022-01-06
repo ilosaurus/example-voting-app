@@ -39,10 +39,10 @@ pipeline{
       echo 'the job is complete'
     }
       failure {
-          slackSend (channel: "jenkins-cicd", message: "Build Failed - Ilham - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+          slackSend (channel: "jenkins-cicd", message: "Build Failed On Docker Agent - Ilham - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
       }
       success {
-          slackSend (channel: "jenkins-cicd", message: "Build Succeeded - Ilham - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+          slackSend (channel: "jenkins-cicd", message: "Build Succeeded On Docker Agent - Ilham - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
       }
   }
 }
